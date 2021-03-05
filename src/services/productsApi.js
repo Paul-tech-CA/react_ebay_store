@@ -1,11 +1,11 @@
-import axios from "axios";
-import { transformData } from "../utils/utils";
+import axios from 'axios';
+import { transformData } from '../utils/utils';
 
-const addNewProduct = async (product) => {
+const addNewProduct = async product => {
   try {
     const response = await axios.post(
-      `${process.env.REACT_APP_DATA_BASE_BASEURL}/products.json`,
-      product
+      `${process.env.REACT_APP_DATA_BASE_URL}/products.json`,
+      product,
     );
     return response.data.name;
   } catch (error) {
@@ -13,11 +13,11 @@ const addNewProduct = async (product) => {
   }
 };
 
-const getProducts = async (product) => {
+const getProducts = async product => {
   try {
     const response = await axios.get(
-      `${process.env.REACT_APP_DATA_BASE_BASEURL}/products.json`,
-      product
+      `${process.env.REACT_APP_DATA_BASE_URL}/products.json`,
+      product,
     );
     return response.data ? transformData(response.data) : [];
   } catch (error) {
@@ -25,10 +25,10 @@ const getProducts = async (product) => {
   }
 };
 
-const deleteProduct = async (id) => {
+const deleteProduct = async id => {
   try {
     const response = await axios.delete(
-      `${process.env.REACT_APP_DATA_BASE_BASEURL}/products/${id}.json`
+      `${process.env.REACT_APP_DATA_BASE_URL}/products/${id}.json`,
     );
   } catch (error) {
     console.log(error);

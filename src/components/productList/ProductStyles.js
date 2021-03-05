@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const ProductListCont = styled.ul`
   margin-left: 60px;
@@ -10,12 +10,12 @@ export const ProductListCont = styled.ul`
   margin-right: -15px;
   margin-bottom: -20px;
 
-  .notfound_img {
+  .notFoundImg {
     width: 100px;
     height: auto;
   }
 
-  .product_item {
+  .productItem {
     padding-top: 20px;
     width: 180px;
     text-align: center;

@@ -11,7 +11,7 @@ class ProductList extends Component {
 
   componentDidMount() {
     axios
-      .get(`${process.env.REACT_APP_DATA_BASE_BASEURL}/products.json`)
+      .get(`${process.env.REACT_APP_DATA_BASE_URL}/products.json`)
       // .then((response) => this.setState({ products: response }));
       .then(response => {
         if (response.data) {
@@ -43,9 +43,9 @@ class ProductList extends Component {
         {products.map(
           ({ avatar, category, description, id, name, price, sale }) => {
             return (
-              <li className="product_item" key={id}>
+              <li className="productItem" key={id}>
                 <img
-                  className="notfound_img"
+                  className="notFoundImg"
                   src={notFoundImg}
                   alt="Image Not Found"
                 />

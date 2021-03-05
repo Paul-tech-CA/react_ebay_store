@@ -1,7 +1,7 @@
-import React from "react";
-import logo from "../../images/ebay.png";
-import { HeaderContainer } from "./HeaderStyled";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import logo from '../../images/ebay.png';
+import { HeaderContainer } from './HeaderStyled';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   return (
@@ -23,7 +23,7 @@ const Header = () => {
         >
           About
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/productsform"
           className="navLink"
           activeClassName="activeNavLink"
@@ -31,11 +31,18 @@ const Header = () => {
           Products Form
         </NavLink>
         <NavLink
-          to="/productslist"
+          to="/productsList"
           className="navLink"
           activeClassName="activeNavLink"
         >
           Products List
+        </NavLink> */}
+        <NavLink
+          to="/products"
+          className="navLink"
+          activeClassName="activeNavLink"
+        >
+          Products
         </NavLink>
         <NavLink to="/cart" className="navLink" activeClassName="activeNavLink">
           Cart
