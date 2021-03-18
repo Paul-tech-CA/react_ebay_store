@@ -1,53 +1,15 @@
 import React from 'react';
-import logo from '../../images/ebay.png';
+import logo from '../../images/asd.png';
 import { HeaderContainer } from './HeaderStyled';
-import { NavLink } from 'react-router-dom';
+import { mainRoutes } from '../../routes/mainRoutes';
+import NavigationList from '../navigation/NavigationList';
 
-const Header = () => {
+const Header = ({ toggleTheme }) => {
   return (
     <HeaderContainer>
-      <img className="logo" src={logo} alt="Logo" width="120" height="120" />
-      <nav>
-        <NavLink
-          exact
-          to="/"
-          className="navLink"
-          activeClassName="activeNavLink"
-        >
-          Home
-        </NavLink>
-        <NavLink
-          to="/about"
-          className="navLink"
-          activeClassName="activeNavLink"
-        >
-          About
-        </NavLink>
-        {/* <NavLink
-          to="/productsform"
-          className="navLink"
-          activeClassName="activeNavLink"
-        >
-          Products Form
-        </NavLink>
-        <NavLink
-          to="/productsList"
-          className="navLink"
-          activeClassName="activeNavLink"
-        >
-          Products List
-        </NavLink> */}
-        <NavLink
-          to="/products"
-          className="navLink"
-          activeClassName="activeNavLink"
-        >
-          Products
-        </NavLink>
-        <NavLink to="/cart" className="navLink" activeClassName="activeNavLink">
-          Cart
-        </NavLink>
-      </nav>
+      <img className="logo" src={logo} alt="Logo" />
+      <NavigationList routes={mainRoutes} />
+      <button onClick={toggleTheme}>Switch theme</button>
     </HeaderContainer>
   );
 };

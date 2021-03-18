@@ -1,14 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './components/App';
+import App from './App';
+import store from './redux/store';
 import { BrowserRouter } from 'react-router-dom';
+import { createDispatchHook, Provider } from 'react-redux';
+// import moduleName from ''
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <BrowserRouter>
       <App />
     </BrowserRouter>
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById('root'),
 );
